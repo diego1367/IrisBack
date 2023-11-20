@@ -4,7 +4,7 @@ Prueba Tecnica iris
 
 pasos
 
-Clonar el repositorio: git clone https://github.com/tu-usuario/tu-proyecto.git
+Clonar el repositorio: git clone [https://github.com/tu-usuario/tu-proyecto.git](https://github.com/diego1367/IrisBack/tree/main)
 Instalar dependencias: tener instalado net 6
 
 
