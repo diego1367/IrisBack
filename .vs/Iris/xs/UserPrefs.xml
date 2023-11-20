@@ -1,0 +1,41 @@
+﻿<Properties StartupConfiguration="{9785F487-9D0B-4C60-A293-381982FD5545}|Default">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Iris PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Iris/appsettings.json">
+    <Files>
+      <File FileName="Iris/Controllers/ToDoController.cs" Line="96" Column="1" />
+      <File FileName="Businnes/Interfaces/IToDoBusiness.cs" Line="14" Column="1" />
+      <File FileName="Businnes/ToDoBusiness.cs" Line="19" Column="23" />
+      <File FileName="Entities/TaskToDo.cs" Line="10" Column="30" />
+      <File FileName="Repository/UnitOfWork.cs" Line="1" Column="1" />
+      <File FileName="Repository/IUnitOfWork.cs" Line="1" Column="1" />
+      <File FileName="Repository/IGenericRepository.cs" Line="1" Column="1" />
+      <File FileName="Repository/GenericRepository.cs" Line="1" Column="1" />
+      <File FileName="Data/ContextDb.cs" Line="23" Column="48" />
+      <File FileName="Iris/appsettings.json" Line="13" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Iris" expanded="True">
+            <Node name="Businnes" expanded="True">
+              <Node name="Interfaces" expanded="True" />
+            </Node>
+            <Node name="Data" expanded="True" />
+            <Node name="Entities" expanded="True" />
+            <Node name="Iris" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="appsettings.json" selected="True" />
+            </Node>
+            <Node name="Repository" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+</Properties>

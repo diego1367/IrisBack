@@ -1,0 +1,253 @@
+{
+	"info": {
+		"_postman_id": "305e2d73-d4ff-4043-b9b3-dbfaee36f115",
+		"name": "IrisBank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7818818"
+	},
+	"item": [
+		{
+			"name": "Token",
+			"item": [
+				{
+					"name": "Token",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var res = JSON.parse(responseBody);\r",
+									"var token = res.token;\r",
+									"pm.environment.set('token', token);\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGllZ28iLCJleHAiOjE3MDA0NDA4MjQsImlzcyI6ImRpZWdvIiwiYXVkIjoiMTIzIn0.-6ph6B2cNo1nhm_807ycAaOOY3T-kszT5_SRpXM9iQ4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7089/api/ToDo/token?username=diego",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7089",
+							"path": [
+								"api",
+								"ToDo",
+								"token"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "diego"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GetLista",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGllZ28iLCJleHAiOjE3MDA0NDQ5MzQsImlzcyI6ImRpZWdvIiwiYXVkIjoiMTIzIn0.2modVTLddn0OpUXgk0zkDrOxn7eu9hkCtuPbpwuCL14",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGllZ28iLCJleHAiOjE3MDA0NDA4MjQsImlzcyI6ImRpZWdvIiwiYXVkIjoiMTIzIn0.-6ph6B2cNo1nhm_807ycAaOOY3T-kszT5_SRpXM9iQ4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7089/api/ToDo",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7089",
+					"path": [
+						"api",
+						"ToDo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGllZ28iLCJleHAiOjE3MDA0NDA4MjQsImlzcyI6ImRpZWdvIiwiYXVkIjoiMTIzIn0.-6ph6B2cNo1nhm_807ycAaOOY3T-kszT5_SRpXM9iQ4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://localhost:7089/api/ToDo/1002",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7089",
+					"path": [
+						"api",
+						"ToDo",
+						"1002"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"description\": \"diegoinsert2 nuevo\",\r\n    \"completed\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7089/api/ToDo",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7089",
+					"path": [
+						"api",
+						"ToDo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"description\": \"diegoinsert2asdasd nuevo\",\r\n    \"completed\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7089/api/ToDo",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7089",
+					"path": [
+						"api",
+						"ToDo"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
